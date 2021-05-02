@@ -1,0 +1,70 @@
+[debug] [2021-05-02T17:16:50.981Z] ----------------------------------------------------------------------
+[debug] [2021-05-02T17:16:50.984Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2021-05-02T17:16:50.984Z] CLI Version:   9.9.0
+[debug] [2021-05-02T17:16:50.984Z] Platform:      darwin
+[debug] [2021-05-02T17:16:50.984Z] Node Version:  v14.16.1
+[debug] [2021-05-02T17:16:50.985Z] Time:          Sun May 02 2021 22:46:50 GMT+0530 (India Standard Time)
+[debug] [2021-05-02T17:16:50.985Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-02T17:16:50.995Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-02T17:16:50.996Z] > authorizing via signed-in user (jagadishpatil231@gmail.com)
+[debug] [2021-05-02T17:16:50.996Z] [iam] checking project customchat-75966 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-05-02T17:16:50.998Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-02T17:16:50.998Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-02T17:16:51.506Z] <<< HTTP RESPONSE 200 {"date":"Sun, 02 May 2021 17:16:51 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-02T17:16:51.531Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/customchat-75966:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-05-02T17:16:53.424Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 02 May 2021 17:16:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1156","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-02T17:16:53.425Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/customchat-75966/serviceAccounts/customchat-75966@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-05-02T17:16:55.267Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 02 May 2021 17:16:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'customchat-75966'...
+[info] 
+[info] i  deploying functions 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-05-02T17:16:59.853Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-05-02T17:16:59.854Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-05-02T17:16:59.854Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-05-02T17:18:15.380Z] Error: connect ETIMEDOUT 216.58.200.138:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.200.138:443
+[debug] [2021-05-02T17:18:41.862Z] ----------------------------------------------------------------------
+[debug] [2021-05-02T17:18:41.864Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2021-05-02T17:18:41.865Z] CLI Version:   9.9.0
+[debug] [2021-05-02T17:18:41.865Z] Platform:      darwin
+[debug] [2021-05-02T17:18:41.865Z] Node Version:  v14.16.1
+[debug] [2021-05-02T17:18:41.865Z] Time:          Sun May 02 2021 22:48:41 GMT+0530 (India Standard Time)
+[debug] [2021-05-02T17:18:41.866Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-02T17:18:41.876Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-02T17:18:41.876Z] > authorizing via signed-in user (jagadishpatil231@gmail.com)
+[debug] [2021-05-02T17:18:41.877Z] [iam] checking project customchat-75966 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-05-02T17:18:41.879Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/customchat-75966:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-05-02T17:18:43.810Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 02 May 2021 17:18:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1146","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-02T17:18:43.813Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/customchat-75966/serviceAccounts/customchat-75966@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-05-02T17:18:45.648Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 02 May 2021 17:18:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'customchat-75966'...
+[info] 
+[info] i  deploying functions 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-05-02T17:18:49.872Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-05-02T17:18:49.873Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-05-02T17:18:49.873Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/customchat-75966/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-05-02T17:20:05.260Z] Error: connect ETIMEDOUT 216.58.200.138:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.200.138:443
